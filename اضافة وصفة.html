@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/style.css">
-    <title>وصفاتي</title>
+    <link rel="stylesheet" href="./Css/add-recipe.css">
+    <title>أضافة وصفة</title>
 </head>
-
 <body>
     <!--START HEADER-->
     <header class="header-area">
@@ -28,10 +27,6 @@
                     </div>
                 </div>
                 <div class="search">
-                    <!--<div class="icon"></div>
-                    <div class="input"></div>
-                    </div> -->
-                    <!-- <img class="icon" onclick="doSearch()" src="./img/magnifying-glass.png"/> -->
                     <div class="search-icon"></div>
                     <div class="close-icon"></div>
                 </div>
@@ -41,44 +36,35 @@
                 <div class="navbar-nav">
                     <div class="nav-item">
                         <button class="add-btn">اضافة وصفة جديدة +</button>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <!--END HEADER-->
-
-    <!-- START MAIN AREA -->
-<main>
-    <section class="home-banner">
-        <div class="container">
-            <div class="main-area">
-                <div class="img-card">
-                    <img src="./img/imad-786-n5I4Ix008-0-unsplash.jpg" alt="">
-                </div>
-                <div class="img-card">
-                    <img src="./img/Cream-of-Mushroom-Soup-IMAGE-135.jpg" alt="">
-                </div>
-                <div class="img-card">
-                    <img src="./img/Mongolian-Beef-3.jpg" alt="">
-                </div>
-                <div class="img-card">
-                    <img src="./img/kobby-mendez-idTwDKt2j2o-unsplash.jpg" alt="">
-                </div>
+        <section class="recip-area">
+            <div id="add-recipe" class="container" >
+                <h1>إضافة وصفة جديدة</h1>
+                <form id="recipe-form">
+                    <div class="form-group">
+                        <label>اسم الوصفة:</label>
+                        <input type="text" id="title" required placeholder="مثلاً: مكرونة بالبشاميل">
+                    </div>
+                    <div class="form-group">
+                        <label>رابط صورة الوصفة:</label>
+                        <input type="url" id="image" placeholder="ضع رابط صورة من الإنترنت">
+                    </div>
+                    <div class="form-group">
+                        <label>المكونات (فصل بينها بفاصلة):</label>
+                        <textarea id="ingredients" rows="3" placeholder="طحين, سكر, بيض..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>طريقة التحضير:</label>
+                        <textarea id="instructions" rows="5" placeholder="اكتب الخطوات هنا..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">حفظ الوصفة</button>
+                </form>
             </div>
-        </div>
-    </section>
-
-    <section class="favorite-reicpe-area">
-        
-    </section>
-</main>
-    
-    <footer>
-
-    </footer>
-    
-    <script src="./Js/main.js"></script>
+        </section>
 </body>
-
 </html>
