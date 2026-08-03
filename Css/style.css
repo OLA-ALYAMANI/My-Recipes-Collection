@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Italianno&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+@import url(./partials/_variables.css);
 
 html{
     font-size: 120%;
@@ -16,18 +17,6 @@ html{
 nav div a img{
     width: 50px;
     margin: 0 4.5px;
-}
-
-:root{
-    --primary-100:#896C6C;
-    --primary-200:#E5BEB5;
-    --primary-300:#FFFDF1;
-    --primary-400:#F5FAE1;
-    --primary-500:#FFD45A;
-    --primary-600:#F88F01;
-    --primary-700:#E27802;
-    --primary-800:#6A492B;
-    --primary-900:#58391C;
 }
 
 .header-list{
@@ -197,8 +186,8 @@ nav div a img{
 
 .navbar-nav button:hover{
     background-color: var(--primary-300);
-    border: 3px double var(--primary-700);
-    border-color: var(--primary-500);
+    border: 3px double var(--primary-100);
+    /* border-color: var(--primary-500); */
 }
 
 .add-btn{
