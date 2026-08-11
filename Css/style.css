@@ -144,7 +144,6 @@ nav div a img{
   transform: translateX(-50%) rotate(-45deg);
 }
 
-
 /* .icon{
     height: 35px;
     display: flex;
@@ -235,4 +234,22 @@ nav div a img{
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.wrapper{
+    width: 320px;
+    height: 400px;
+    position: relative;
+}
+
+.wrapper .card{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.wrapper .card .recp-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

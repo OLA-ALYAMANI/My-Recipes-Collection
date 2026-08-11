@@ -20,9 +20,10 @@
     top: -5px;
     width: 60%;
     max-width: 850px;
-    background: linear-gradient(45deg, var(--primary-500));
-    transform:rotate(10deg) skewY(4deg);
-    transform-origin: top right;
+    height: 30rem;
+    background: linear-gradient(45deg, #FFD45A);
+    transform:rotate(35deg) skewY(10deg);
+    transform-origin: top left;
     z-index: 1;
     opacity: 0.8;
 }
