@@ -243,6 +243,7 @@ nav div a img{
 }
 
 .wrapper .card{
+    background: var(--primary-300);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -252,4 +253,10 @@ nav div a img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.wrapper .back-face .recp-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
 }
