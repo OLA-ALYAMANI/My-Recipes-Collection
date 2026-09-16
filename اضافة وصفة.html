@@ -12,13 +12,16 @@
     <header class="header-area">
         <div class="header-list">
             <nav class="navbar">
-                <a href="الصفحة الرئيسية.html" class="navbar-link">تـــي<img class="logo" src="./img/icons8-spatula-100.png"/>وصــــفــا
-                </a>
-                <button class="navbar-toggler"></button>
+                <button class="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
                 <div class="navbar-list" id="navbarNav">
+                    
                     <div class="navbar-nav">
                         <div class="nav-item">
-                            <a class="nav-link" href="/الصفحة الرئيسية.html">الرئيسية</a>
+                            <button class="add-btn" id="addRecipe">اضافة وصفة جديدة +</button>
                         </div>
                     </div>
                     <div class="navbar-nav">
@@ -28,10 +31,13 @@
                     </div>
                     <div class="navbar-nav">
                         <div class="nav-item">
-                            <button class="add-btn" id="addRecipe">اضافة وصفة جديدة +</button>
+                            <a class="nav-link" href="/الصفحة الرئيسية.html">الرئيسية</a>
                         </div>
                     </div>
                 </div>
+                 <a href="الصفحة الرئيسية.html" class="navbar-link">تـــي<img class="logo" src="./img/icons8-spatula-100.png"/>وصــــفــا
+                </a>
+                
             </nav>
         </div>
     </header>
@@ -53,7 +59,7 @@
                             </div>
                             <div class="form-group">
                                 <label>:صورة الوصفة</label>
-                                <input type="file" id="image" placeholder="تحميل صورة . . .">
+                                <input type="file" id="image" placeholder="تحميل صورة . . ." multiple hidden>
                             </div>
                             <div class="dish-time-container">
                                 <div class="form-group time">
@@ -85,5 +91,7 @@
                 </div>
             </div>
         </section>
+      
+        <script src="./Js/main.js"></script>
 </body>
 </html>
