@@ -47,6 +47,8 @@
     background: rgba(255, 255, 255, 0.4);
 }
 
+
+
 .add-title{
     text-align: center;
 }
@@ -104,6 +106,32 @@
     border-radius: 5px;
     box-sizing: border-box;
     text-align: right;
+    font-family: var(--roboto);
+}
+
+.form-group input, .form-group textarea:hover {
+    border-color: var(--primary-200);
+    outline: none;
+    box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
+}
+
+.recp-option {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    text-align: right;
+    font-family: var(--roboto);
+    color: rgb(132, 130, 130);
+}
+
+.recp-option:focus {
+    border-color: var(--primary-200);
+    outline: none;
+    box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
 }
 
 .btn-submit {
