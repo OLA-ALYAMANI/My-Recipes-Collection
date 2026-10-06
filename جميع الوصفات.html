@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./css/all-recipe.css">
+    <title>الوصفات</title>
+</head>
+<body>
+<!-- ---------------- START HEADER ---------------- -->
+    <header class="header-area">
+        <div class="header-list">
+            <nav class="navbar">
+                <a href="الصفحة الرئيسية.html" class="navbar-link">تـــي<img class="logo" src="./img/icons8-spatula-100.png"/>وصــــفــا
+                </a>
+                <button class="navbar-toggler">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            
+                <div class="navbar-list" id="navbarNav">
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <a class="nav-link" href="/الصفحة الرئيسية.html">الرئيسية</a>
+                        </div>
+                    </div>
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <a class="nav-link" href="/جميع الوصفات">الوصفات</a>
+                        </div>
+                    </div>
+                    
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <button class="add-btn" id="addRecipe" onclick="goAddRecipe()">اضافة وصفة جديدة +</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+<!-- ---------------- END HEADER AREA ---------------- -->
+
+<!-- ---------------- START MAIN AREA ---------------- -->
+ <main>
+    <section class="all-recp-area">
+        <div class="contianer">
+            <div class="all-recp">
+                <div class="all-recp-title">
+                    <h1>دليل كل الوصفات</h1>
+                </div>
+            </div>
+            <hr>
+            <button class="new-recipe-btn">اضـافة وصـفة +</button>
+            <button class="favorites-btn">المفـضلة فـقط <img src="./img/heart.png" class="favorites-icon"></button>
+            <div>
+                <div class="search">
+                    <div class="search-contianer">
+                        <div class="search-icon"></div>
+                        <input class="searchBox" type="text" dir="rtl" id="searchInput" placeholder="ابحث هنا ...">
+                        <button class="search-btn">بحث</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </main>
+
+<!-- ---------------- END MAIN AREA ---------------- -->    
+    <script src="./Js/main.js"></script>
+    <script src="./Css/recipe-card.css"></script>
+</body>
+</html>

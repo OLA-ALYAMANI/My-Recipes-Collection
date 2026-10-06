@@ -68,16 +68,43 @@
                                 </div>
                                 <div class="form-group">
                                     <label>التصنيف:</label>
-                                        <select name="" id="options" class="recp-option">
-                                            <option value="أطباق رئيسية">أطباق رئيسية</option>
-                                            <option value="حلويات">حلويات</option>
-                                            <option value="مقبلات وسلطات">مقبلات وسلطات</option>
-                                            <option value="معجنات وفطائر">معجنات وفطائر</option>
-                                            <option value="شوربات ومشروبات">شوربات ومشروبات</option>
-                                        </select>
+                                        <div id="options" class="recp-option">
+                                            <div class="select-trigger" tabindex="0">
+                                                <span class="custom-select-value">
+                                                    <span>أطباق رئيسية</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/mandi.png">
+                                                </span>
+                                                <span class="custom-select-arrow">&#9662;</span>
+                                            </div>
+                                            <div class="options-list">
+                                                     <div value="مقبلات" class="select-option">
+                                                    <span>مقبلات</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/appetizer.png">
+                                                </div>
+                                                <div value="أطباق رئيسية" class="select-option">
+                                                    <span>أطباق رئيسية</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/mandi.png">
+                                                    
+                                                </div>
+                                                <div value="حلويات" class="select-option">
+                                                    <span>حلويات</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/donut.png">
+                                                </div>
+                                           
+                                                <div value="معجنات وفطائر" class="select-option">
+                                                    <span>معجنات وفطائر</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/puff-pastry.png">
+                                                </div>
+                                                <div value="شوربات" class="select-option">
+                                                    <span>شوربات ومشروبات</span>
+                                                    <img class="option-icon" src="./img/recp-option-icon/soup.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <input type="hidden" id="category" value="أطباق رئيسية">
                                 </div>
                             </div>
-                            <div class="form-group">
+                           <div class="form-group">
                                 <label>:المكونات (فصل بينها بفاصلة)</label>
                                 <textarea id="ingredients" rows="3" placeholder="طحين, سكر, بيض..."></textarea>
                             </div>
@@ -93,5 +120,6 @@
         </section>
       
         <script src="./Js/main.js"></script>
-</body>
+        <script src="./Js/add-recipe.js"></script>
+</body> 
 </html>

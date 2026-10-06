@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en-ar">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/move-img.css">
     <link rel="stylesheet" href="./Css/recipe-card.css">
     <title>وصفاتي</title>
 </head>
@@ -36,7 +37,7 @@
                     
                     <div class="navbar-nav">
                         <div class="nav-item">
-                            <button class="add-btn" id="addRecipe">اضافة وصفة جديدة +</button>
+                            <button class="add-btn" id="addRecipe" onclick="goAddRecipe()">اضافة وصفة جديدة +</button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,7 @@
     <!-- START MAIN AREA -->
 <main>
     <section class="home-banner">
-        <div class="container">
+        <!-- <div class="container">
             <div class="main-area">
                 <div class="img-card">
                     <img src="./img/imad-786-n5I4Ix008-0-unsplash.jpg" alt="">
@@ -63,7 +64,46 @@
                     <img src="./img/kobby-mendez-idTwDKt2j2o-unsplash.jpg" alt="">
                 </div>
             </div>
+        </div> -->
+        <div class="container">
+        <div class="circle"></div>
+        <div class="slider">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="images">
+                <div class="appetizers-group images-group">
+                    <img src="./img/move-image/Coriander.png" class="img3">
+                    <img src="./img/move-image/natural Foods.png" class="img2">
+                    <img src="./img/move-image/Hummus.png" class="img1">
+                </div>
+                    <div class="soup-group images-group">
+                    <img src="./img/move-image/tomato.png" class="img4">
+                    <img src="./img/move-image/seasoning.png" class="img5">
+                    <img src="./img/move-image/overhead-view-classic-creamy-tomato-soup-white-bowl-garnished-with-fresh-sprig-basil-spices-against-stark-black-background.png" class="img6">
+                </div>
+                <div class="main-group images-group">
+                    <img src="./img/move-image/oil.png" class="img7">
+                    <img src="./img/move-image/Spice.png" class="img8">
+                    <img src="./img/move-image/176b53ef-e721-4005-b26a-5a264a7e0eaf-Photoroom.png" class="img9">
+                </div>
+                <div class="dessers-group images-group">
+                    <img src="./img/move-image/chocolate splash.png" class="img10">
+                    <img src="./img/move-image/Donuts.png" class="img12">
+                    <img src="./img/move-image/Fruits.png" class="img11">
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="ridio1" class="manual-btn"></label>
+                <label for="ridio2" class="manual-btn"></label>
+                <label for="ridio3" class="manual-btn"></label>
+                <label for="ridio4" class="manual-btn"></label>
+            </div>
         </div>
+    </div>
     </section>
 
     <section class="recipe-area">
@@ -100,8 +140,11 @@
                         <img class="recp-img" id="back-img" src="/img/Chiffon-Cake-Recipe-Card.jpg" alt="">
                         <div class="info">
                             <h3 class="recipe-title">الكيكة الاسفنجية</h3>
-                            <p>: وقت التحضير<br>: وقت الطهي</p>
+                            <div class="recipe-time">
+                            <img src="./img/cooking-time.png" alt="وقت التحضير">
+                            </div>
                         </div>
+                        <button class="recp-show-btn" onclick="ShowRecipe()">اظهار الوصفة</button>
                     </div>
                 </div>
             </div>
@@ -114,7 +157,7 @@
 </main>
     
     <script src="./Js/main.js"></script>
-    <script src="./Js/reipe-card.js"></script>
+    <script src="./Js/move-image.js"></script>
 </body>
 
 </html>
