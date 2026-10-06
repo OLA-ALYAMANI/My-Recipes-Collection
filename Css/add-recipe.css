@@ -47,8 +47,6 @@
     background: rgba(255, 255, 255, 0.4);
 }
 
-
-
 .add-title{
     text-align: center;
 }
@@ -76,10 +74,6 @@
 }
 
 #recipe-form {
-    /* background: rgba(255, 221, 171, 0.3); 
-    padding: 2rem;
-    border-radius: 10px;*/
-    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
     text-align: right;
 }
 
@@ -109,15 +103,17 @@
     font-family: var(--roboto);
 }
 
-.form-group input, .form-group textarea:hover {
+.form-group input:hover, .form-group textarea:hover {
     border-color: var(--primary-200);
     outline: none;
     box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
 }
 
 .recp-option {
+    position: relative;
     width: 100%;
-    padding: 10px 20px;
+    height: 43px;
+    /* padding: 10px 20px; */
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
@@ -133,6 +129,113 @@
     outline: none;
     box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
 }
+
+/* .select-trigger {
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+.custom-select-value{
+    width: 40px;
+    height: 60px;
+    font-size: 15px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.recp-option{
+    font-family: var(--roboto);
+}
+
+.recp-option.open .select-trigger {
+    border-color: var(--primary-200);
+    box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
+}
+
+.custom-select-value .option-icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 7px;
+    left: 1.5px;
+}
+
+.custom-select-arrow {
+    /* order: 2;
+    margin-inline-start: auto;
+    font-size: 12px;
+    margin-inline-start: 8px; */
+    /* direction: rtl; */
+    position: relative;
+    right: 7.5px;
+    left: -2.5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recp-option.open .custom-select-arrow {
+    transform: rotate(180deg);
+}
+
+.options-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    font-size: 15px;
+    inset-inline: 0;
+    z-index: 50;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.options-list .option-icon{
+    position: static;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+.recp-option.open .options-list {
+    display: block;
+}
+
+/* .options-list .select-option {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    justify-content: flex-start;
+    gap: 10px;
+} */
+
+.options-list .select-option:hover {
+    background: rgba(229, 190, 181, 0.25);
+}
+
+/* .select-option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 43px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: rgb(132, 130, 130);
+    text-align: right;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.select-option:hover,
+.select-option:focus{
+    outline: none;
+    border-color: var(--primary-200);
+    box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
+} */
 
 .btn-submit {
     background: var(--color-100);

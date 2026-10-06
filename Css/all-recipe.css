@@ -1,0 +1,32 @@
+@import url(./partials/_variables.css);
+
+.all-recp-area{
+    position: relative;
+    width: 70%;
+    height: 40%;
+    padding: 18px;
+    top: 30px;
+    border-radius: 19px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    
+}
+
+.all-recp-title{
+    text-align: right;
+    font-family: var(--roboto);
+}
+
+.new-recipe-btn, .favorites-btn{
+    border-radius: 15px;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+}
+
+.favorites-icon{
+    position: relative;
+    width: 15px;
+    left: 4px;
+    top: 2px;
+}
