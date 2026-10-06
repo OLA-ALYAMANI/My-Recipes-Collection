@@ -1,4 +1,33 @@
-// script.js
+// -------------- SHOW THE RECIPE OPTION --------------
+const dropdown = document.getElementById('options');
+const trigger = dropdown.querySelector('.select-trigger');
+const valueBox = dropdown.querySelector('.custom-select-value');
+const categoryInput = document.getElementById('category');
+
+trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+});
+
+dropdown.querySelectorAll('.options-list .select-option').forEach((option) => {
+    option.addEventListener('click', () => {
+        valueBox.innerHTML = option.innerHTML;
+        categoryInput.value = option.dataset.value;
+        dropdown.classList.remove('open');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
+});
+
+
+// -------------- ADD NEW RECIPE --------------
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') dropdown.classList.remove('open');
+});
 
 // 1. التنقل بين الصفحات
 function showSection(sectionId) {

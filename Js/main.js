@@ -19,6 +19,13 @@
 //     search.classList.toggle('active');
 // }
 
+// -------------------- ADD RECIPE BOTTON --------------------
+function goAddRecipe(){
+  window.location.href = "../اضافة وصفة.html";
+
+}
+
+// -------------------- NAVBAR REACTION --------------------
 const toggler = document.querySelector('.navbar-toggler');
 const menu = document.getElementById('navbarNav');
 
