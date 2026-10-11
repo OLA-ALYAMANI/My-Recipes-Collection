@@ -109,6 +109,14 @@
     box-shadow: 0 0 8px rgba(229, 190, 181, 0.7);
 }
 
+.upload-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .recp-option {
     position: relative;
     width: 100%;
