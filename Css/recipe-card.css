@@ -2,6 +2,20 @@
 
 /* ----- RECIPES SECTION STYLE ----- */
 
+.recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.recipes-grid .wrapper{
+    width: 340px;
+    height: 400px;
+    margin: 0;
+    background: transparent;
+}
+
 .favorite-title{
     text-align: center;
     font-family: var(--roboto);
@@ -36,7 +50,7 @@
     font-family: var(--roboto);
     position: absolute;
     bottom: 10px;
-    left: 4.5px;
+    /* left: 4.5px; */
     z-index: 5;
     width: 145px;
     height: 37px;
@@ -65,7 +79,7 @@
 .card-header{
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 8.5rem;
     row-gap: 10.6rem;
@@ -135,40 +149,68 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    padding: 16px;
+    box-sizing: border-box;
     text-align: center;
     font-family: var(--roboto);
     transform: rotateY(180deg);
 }
 
-.wrapper .back-face #back-img{
-    width: 150px;
-    height: 150px;
+/* .wrapper .back-face img{
+    width: 80px;
+    height: 80px;
     border-radius: 8%;
+} */
+
+.wrapper .cards .back-face .recp-img{
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    object-fit: cover;
+}
+ 
+.back-face .info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
 .back-face .info .recipe-title
 {
-    margin: 11px 0;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    word-break: break-word;
 }
 
 .recipe-time{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 16px;
-    margin-bottom: 20px;
-    padding: 16px 0;
+    margin: 0;
+    padding: 4px 0;
 }
 
 .recipe-time img{
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 }
 
-.recp-show-btn{
+.recp-show-btn,
+.recp-delete-btn{
     font-family: var(--roboto);
     z-index: 5;
     width: 13rem;
     height: 2rem;
+    flex-shrink: 0;
     border: none;
     border-radius: 10px;
     background: #fff;

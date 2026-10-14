@@ -160,6 +160,8 @@
 }
 
 .img6{
+    top: 20%;
+    left: 10%;
     animation: move6 9s ease-in-out forwards;
 }
 
@@ -200,6 +202,8 @@
 }
 
 .img9{
+    top: 20%;
+    left: 10%;
     animation: move9 9s ease-in-out forwards;
 }
 
@@ -240,6 +244,8 @@
 }
 
 .img12{
+    top: 20%;
+    left: 10%;
     animation: move12 9s ease-in-out forwards;
 }
 
