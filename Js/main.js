@@ -21,7 +21,7 @@
 
 // -------------------- ADD RECIPE BOTTON --------------------
 function goAddRecipe(){
-  window.location.href = "../اضافة وصفة.html";
+  window.location.href = "/اضافة وصفة.html";
 
 }
 
