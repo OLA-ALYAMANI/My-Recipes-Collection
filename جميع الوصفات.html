@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/Css/style.css">
     <link rel="stylesheet" href="/Css/all-recipe.css">
     <link rel="stylesheet" href="/Css/recipe-card.css">
+    <link rel="stylesheet" href="/Css/recipe-details.css">
     <title>الوصفات</title>
 </head>
 <body>
@@ -67,10 +68,20 @@
                 <div id="recipes-grid" class="recipes-grid"></div>
             </div>
         </div>
+<!-- ---------------- START DETAILS AREA ---------------- -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+<!-- ---------------- END DETAILS AREA ---------------- --> 
     </section>
+  
  </main>
 
 <!-- ---------------- END MAIN AREA ---------------- -->    
+ 
     <script src="/Js/main.js"></script>
     <script src="/Js/add-recipe.js"></script>
 </body>
