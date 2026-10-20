@@ -51,12 +51,12 @@ function readImage(file) {
 //     location.href = '/اضافة وصفة.html'
 // }
 
-function showRecipe(index) {
-    location.href = `recipe-details.html?id=${index}`;
-}
+// function showRecipe(index) {
+//     location.href = `recipe-details.html?id=${index}`;
+// }
 
-const newRecipeBtn = document.querySelector('.new-recipe-btn');
-if (newRecipeBtn) newRecipeBtn.addEventListener('click', goAddRecipe);
+// const newRecipeBtn = document.querySelector('.new-recipe-btn');
+// if (newRecipeBtn) newRecipeBtn.addEventListener('click', goAddRecipe);
 
 
 // 4. القائمة المنسدلة للتصنيف (صفحة الإضافة)
@@ -142,6 +142,53 @@ if (form) {
     })
 }
 
+const modal = document.getElementById('recipeModal');
+const modalBody = document.getElementById('modalBody');
+const closeModalBtn = document.getElementById('closeModal');
+
+function closeRecipe() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function openRecipe(index) {
+    if (!modal) return;
+    const r = recipes[index];
+    if (!r) return;
+
+    modalBody.innerHTML = '';
+    modalBody.appendChild(el('h2', 'modal-title', r.title));
+
+    const meta = [r.category, r.time].filter(Boolean).join(' • ');
+    if (meta) modalBody.appendChild(el('p', 'modal-meta', meta));
+
+    if (r.image) {
+        const img = el('img', 'modal-img');
+        img.src = r.image;
+        img.alt = r.title;
+        modalBody.appendChild(img);
+    }
+
+    modalBody.appendChild(el('h3', '', 'المكونات'));
+    modalBody.appendChild(el('p', 'modal-text', r.ingredients));
+    modalBody.appendChild(el('h3', '', 'طريقة التحضير'));
+    modalBody.appendChild(el('p', 'modal-text', r.instructions));
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+if (modal) {
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeRecipe);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeRecipe();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeRecipe();
+    });
+}
+
 //  6. بناء بطاقة الوصفة ( نفس تنسيق wrapper)
 function createRecipeCard(recipe, index) {
     const imgSrc = recipe.image || './img/no-image.png';
@@ -158,7 +205,7 @@ function createRecipeCard(recipe, index) {
     const favBtn = el('button', 'rec-fav-img');
     favBtn.type = 'button';
     const favIcon = el('img', 'fav-icon');
-    favIcon.src = './img/love.png';
+    favIcon.src = './img/heart.png';
     favIcon.alt = 'مفضلة';
     if (recipe.favorite) favBtn.classList.add('active');
     favBtn.appendChild(favIcon);
@@ -199,7 +246,7 @@ function createRecipeCard(recipe, index) {
 
     const showBtn = el('button', 'recp-show-btn', 'اظهار الوصفة');
     showBtn.type = 'button';
-    showBtn.addEventListener('click', () => showRecipe(index));
+    showBtn.addEventListener('click', () => openRecipe(index));
 
     const delBtn = el('button', 'recp-delete-btn', 'حذف 🗑️');
     delBtn.type = 'button';
