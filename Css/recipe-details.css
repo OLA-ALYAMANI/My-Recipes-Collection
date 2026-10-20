@@ -1,0 +1,55 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal.open {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    animation: zoomIn .25s ease;
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.modal-img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+.modal-text {
+    white-space: pre-line;
+    line-height: 1.8;
+}
+.modal-meta {
+    color: #888;    
+}
+
+@keyframes zoomIn {
+    from{
+        transform: scale(.7);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
